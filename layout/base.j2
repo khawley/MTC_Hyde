@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+<html>
+<head>
+{% block HTMLhead %}{% include "HTMLhead.j2" %}{%endblock%}
+{% block HTMLheadExtended %}{%endblock%}
+</head>
+
+<body>
+
+<div class="mainContainer">
+
+{% block bannerNav %}{% include "bannerNav.j2" %}{%endblock%}
+
+<div class="floatLeft">
+<!--this is the main left area container which contains a narrower div to provide for a margin between the left and right float divs-->
+   
+   <div class="leftInterior">
+   <!--main text container-->
+      {% block MainText %}
+      {%endblock%}
+   <!--close main text container below -->
+   </div>
+
+<!--closing main left float container below-->
+</div>
+
+
+<div class="floatRight">
+<!--this is the main RIGHT area container-->
+   <div class="rightInterior">
+      <div style="background-color:#537435; color:white;">
+      <h3 align="center" class="whiteHeader3"><B>{%block SidebarTitle %}{%endblock%}</B></h3>
+      </div>
+      
+      <div class="eventsContainer">
+         <div align="center">
+            {%block SidebarText %}
+            {%endblock%}
+         </div>
+      </div>
+     
+   <!-- closing rightInterior container below -->
+   </div>
+
+
+
+<!--closing main RIGHT float container below-->
+</div>
+
+{% block infoFooter %}{% include "infoFooter.j2" %}{% endblock %}
+
+<!--div below stretches black border around entire system-->
+<div style="clear:both; padding:0px; margin-top:0px; margin-bottom:0px;"></div>
+
+<!--mainContainer div closed below-->
+</div>
+
+{% block affiliateLinks %}{% include "affiliateLinks.j2" %}{%endblock%}
+
+</body>
+</html>

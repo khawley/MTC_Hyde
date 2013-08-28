@@ -1,0 +1,16 @@
+/* used Tiny Dropdown menu*/
+ul.menu {list-style:none;margin:0px;padding:0;}
+ul.menu * {font-family: Arial,Helvetica,sans-serif; font-size: 14px;color:#ffffff; text-align:left;position:relative;margin:0;padding:0;}
+ul.menu a {display:block;color:#000;text-decoration:none;}
+ul.menu li {position:relative;float:left;}
+ul.menu ul {position:absolute;background:#E6BA85;display:none;opacity:0;list-style:none;width:175px}
+ul.menu ul li {position:relative;border:0px;margin:0;}
+ul.menu ul li a {width:155px;display:block;padding:5px 10px 7px;background-color:#E6BA85;}
+ul.menu ul li a:hover {background-color: #F2DCC2;}
+ul.menu ul ul {left:100%;top:-1px}
+ul.menu .right{left:-100%;top:-1px;}
+ul.menu .menulink {padding:6px 20px;background:#7D241A;width:auto;color:#fff;text-align:center;font-weight:bold;font-size: 18px;}
+ul.menu .menulink:hover, ul.menu .menuhover {background:#E6BA85; color:#000;}
+ul.menu .sub { background:#E6BA85 url(/TinyDropdown/arrow.gif) no-repeat;background-position: 95% 50%;}.pink {
+	color: #F0F;
+}

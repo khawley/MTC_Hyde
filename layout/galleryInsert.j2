@@ -1,0 +1,27 @@
+{% for page in gallery.page %}
+
+{% if (page.url == resource.relative_path) %}
+<script type="text/javascript">
+	function startGallery() {
+		var myGallery = new gallery($('myGallery'), {
+			timed: true,
+			showCarousel: false,
+			showInfopane: false
+		});
+	}
+	window.addEvent('domready', startGallery);
+</script>
+<div id="myGallery" onload="set_banner()">
+
+{% for img in page.imgs %}
+<div class="imageElement">
+   <a href="{{img.link}}" class="open"></a>
+   <img src="{{img.src}}" class="full">
+</div>
+{%endfor%}
+
+</div>
+<br>
+
+{%endif%}
+{%endfor%}

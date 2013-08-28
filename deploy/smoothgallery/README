@@ -1,0 +1,6 @@
+This folder and its contents are used to create the scrolling/rotating banner on the homepage.
+To change aesthetics, such as color, size, shape, etc modify the css.
+To change the way the banners are displayed (with or without arrows, duration between switching)
+go into the scripts.
+
+This script was found online as opensource freeware.  It is not my creation, nor do I take credit for it.
