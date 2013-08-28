@@ -18,7 +18,10 @@ plugins:
 context:
     providers:
         gallery: gallery.yaml
+        summer: summer.yaml
+        yr_rnd: yr_rnd.yaml
     data:
+        online_reg: "https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883"
         author:
             name: Merlin Rebrović
             url: "http://merlin.rebrovic.net"

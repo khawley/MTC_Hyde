@@ -43,3 +43,32 @@
 {%- endif %}
 </div>
 {% endmacro %}
+
+
+
+{% macro render_camp_info() %}
+{% for camp in summer.camp_names %}
+{%if (camp.name == resource.meta.name) %}
+{% filter markdown %}
+**_Youth Grades {{camp.grade}}_**
+{%endfilter%}
+
+{%if camp.img %}
+<img src="{{camp.img.url}}" name="{{camp.name}}" width="{{camp.img.width}}" height="{{camp.img.height}}" hspace="{{camp.img.hspace}}" vspace="{{camp.img.vspace}}" border="{{camp.img.border}}" align="{{camp.img.align}}">
+{%endif%}
+
+{% filter markdown %}
+{%for no, week in camp.week %}
+**_{{camp.name}}  {{no}}: {{week}}_**  
+{%endfor%}
+
+####Prices:
+{% for no, price in camp.price %}
+ **_{{camp.name}} {{no}}:_** {{price}}  
+{%endfor%}
+{%endfilter%}
+
+{%endif%}
+{%endfor%}
+
+{% endmacro %}

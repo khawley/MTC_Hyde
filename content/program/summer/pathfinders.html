@@ -1,0 +1,97 @@
+---
+extends: base.j2
+title: Pathfinders
+keywords: elementary, jr high, camp
+description: Camp for ages 8-13 with hiking, archery, crafts, team work on the challenge course and other activities as well as Bible Encounters.
+
+name: Pathfinders
+---
+
+{% block MainText %}
+
+<table width="537" border="0">
+  <tr>
+    <td width="375"><h1>Pathfinders</h1></td>
+    <td width="152" align="right">
+       <button onClick=
+    "window.open('https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883')">
+    Register Online Now</button> 
+    
+    </td>
+  </tr>
+</table>
+
+{{ macros.render_camp_info() }}
+{#{% for camp in summer.camp_names %}
+{%if (camp.name == resource.meta.name) %}
+{% filter markdown %}
+**_Youth Grades {{camp.grade}}_**
+{%endfilter%}
+
+{% if camp.img %}
+<img src="{{camp.img.url}}" name="{{camp.name}}" width="{{camp.img.width}}" height="{{camp.img.height}}" hspace="{{camp.img.hspace}}" vspace="{{camp.img.vspace}}" border="{{camp.img.border}}" align="{{camp.img.align}}">
+{%endif%}
+
+{% filter markdown %}
+{%for no, week in camp.week %}
+**_{{camp.name}}  {{no}}: {{week}}_**  
+{%endfor%}
+
+{% for no, price in camp.price %}
+**_{{camp.name}} {{no}} {{price}}_**  
+{%endfor%}
+{%endfilter%}
+
+{%endif%}
+{%endfor%} #}
+
+{% filter markdown %}
+This program is designed for new and returning campers who are
+ready for a week of fun and excitement. Pathfinders will enjoy
+traditional camp activities such as hiking, swimming, archery or
+creek walking and they will have the chance to try new options like
+geocache, Balanz Bikes, night hikes and campouts. 
+
+Fee includes lodging, meals, staff, summer programs, 5x7 camp photo and more.
+
+Stay two weeks using [Connections][connectionsLink] options (or  use Connections for a Sunday pickup time.)
+
+
+[connectionsLink]: /program/summer/connections.html
+{%endfilter%}
+
+<object id="vp1gsGc0" width="432" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1gsGc0" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="432" height="240"></embed></object>
+<br>
+
+{% include "socialShare.j2" %}
+
+<h4 align="center"><a href="/program/summer/summer_camp.html#SummerSchedule">Return to Summer Schedule</a></h4>
+{%endblock%}
+
+
+
+{% block SidebarTitle %}Sample Daily Schedule{%endblock%}
+{% block SidebarText %}
+<div align="left">
+{% filter markdown %}
+8:00am Wake up  
+8:30am Breakfast  
+9:45am Camp Clean-up  
+10:00am Opening  
+10:15am Activities/Bible Encounter  
+12:30pm Lunch  
+1:15pm FOB (Rest time)  
+1:45pm Activities  
+3:30pm [Trading Post][tradingpostLink]Trading Post  
+Continue Activities  
+6:00pm Dinner  
+7:15pm All-Camp Activity  
+8:15pm Trading Post  
+8:45pm Campfire Devotions  
+9:00pm Showers and Cabin Time  
+10:00pm Lights Out
+
+[tradingpostLink]: /about/tradingpost.html
+{%endfilter%}
+</div>
+{%endblock%}

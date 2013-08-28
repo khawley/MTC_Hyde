@@ -2,6 +2,7 @@
 body {margin:0px; padding:0px; background-image:url(/images/mtcross_bgsquare.jpg); width:100%;}
 h1 {margin-top:16px; margin-bottom:0px; font-family:Arial, Helvetica, sans-serif; font-size:36px; font-weight:100;}
 h3.whiteHeader3 {font-size:18px; font-family:Arial, Helvetica, sans-serif; font-weight:normal; margin-left:15px; padding-top:8px; padding-bottom:8px; margin-top:0px; margin-bottom:0px;}
+h4{margin-bottom:0}
 .boldh4 {margin-top:0px; margin-bottom:0px; font-size:16px; font-weight:bold; font-family:Arial, Helvetica, sans-serif;}
 p {
 	font-family:Arial, Helvetica, sans-serif;
