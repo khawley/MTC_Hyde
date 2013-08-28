@@ -9,41 +9,7 @@ name: Pathfinders
 
 {% block MainText %}
 
-<table width="537" border="0">
-  <tr>
-    <td width="375"><h1>Pathfinders</h1></td>
-    <td width="152" align="right">
-       <button onClick=
-    "window.open('https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883')">
-    Register Online Now</button> 
-    
-    </td>
-  </tr>
-</table>
-
 {{ macros.render_camp_info() }}
-{#{% for camp in summer.camp_names %}
-{%if (camp.name == resource.meta.name) %}
-{% filter markdown %}
-**_Youth Grades {{camp.grade}}_**
-{%endfilter%}
-
-{% if camp.img %}
-<img src="{{camp.img.url}}" name="{{camp.name}}" width="{{camp.img.width}}" height="{{camp.img.height}}" hspace="{{camp.img.hspace}}" vspace="{{camp.img.vspace}}" border="{{camp.img.border}}" align="{{camp.img.align}}">
-{%endif%}
-
-{% filter markdown %}
-{%for no, week in camp.week %}
-**_{{camp.name}}  {{no}}: {{week}}_**  
-{%endfor%}
-
-{% for no, price in camp.price %}
-**_{{camp.name}} {{no}} {{price}}_**  
-{%endfor%}
-{%endfilter%}
-
-{%endif%}
-{%endfor%} #}
 
 {% filter markdown %}
 This program is designed for new and returning campers who are

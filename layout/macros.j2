@@ -49,6 +49,19 @@
 {% macro render_camp_info() %}
 {% for camp in summer.camp_names %}
 {%if (camp.name == resource.meta.name) %}
+
+<table width="537" border="0">
+  <tr>
+    <td width="375"><h1>{{camp.name}}</h1></td>
+    <td width="152" align="right">
+       <button onClick=
+    "window.open('{{online_reg}}')">
+    Register Online Now</button> 
+    
+    </td>
+  </tr>
+</table>
+
 {% filter markdown %}
 **_Youth Grades {{camp.grade}}_**
 {%endfilter%}
