@@ -57,35 +57,106 @@ dates:
          
          
 camp_names:
-   - name: Pathfinders
-     grade: 3-5
-     week: 
-         1: week 1
-         2: week 2
-         5: week 5
-     price:
-         1: $305
-         3 - 7: $370
-     img:
+   - info: &explorers
+      name: Explorers
+      url: /program/summer/explorers.html
+      grade: 2-3
+      weeks:
+         1: *week1
+         4: *week4
+         6: *week6
+         7: *week7
+      price: $340
+      img:
+         url: /images/Photos/Pool/Danielpoolboys.jpg
+         width: 214
+         height: 154
+         hspace: 10
+         vspace: 10
+         align: left
+         border: 2
+   - info: &pathfinders
+      name: Pathfinders
+      url: /program/summer/pathfinders.html
+      grade: 3-5
+      weeks: 
+         1: *week1
+         4: *week4
+         6: *week6
+         7: *week7
+      prices:
+         "1": $340
+         "4": $390
+         "6 & 7": $340
+      img:
          url: /images/Photos/2009 Archery.JPG
          width: 154
          height: 214
          hspace: 10
          vspace: 10
          align: left
-         border: 0
+         border: 2
+   - info: &connections
+      name: Connections
+      url: /program/summer/connections.html
+      subheader: Connects TWO weeks of Camp OR Provides a Saturday or Sunday Pick-up
+      weeks: 
+         4.5: *weekend4
+         5.5: *weekend5
+         6.5: *weekend6
+      price: $80
+      img:
+         url: /images/Photos/2009 Archery.JPG
+         width: 154
+         height: 214
+         hspace: 10
+         vspace: 10
+         align: left
+         border: 2
+   - info: &treetoppers
+      name: Tree Toppers
+      url: /program/summer/treetoppers.html
+      grades: 4-6 & 7-9 w/ high ropes
+      weeks:
+         1: *week1
+         "4": *week4
+         6: *week6
+         7: *week7
+      prices:
+         "1": $340
+         "4": $390
+         "6 & 7": $340
+      img:
+         url: /images/Photos/Facilities/2009 Tree Houses.JPG
+         width: 215
+         height: 154
+         hspace: 10
+         vspace: 25
+         align: right
+         border: 2
+   - info: &trailblazers
+      name: Trailblazers
+      url: /program/summer/trailblazers.html
+      grades: 7-9
+      weeks:
+         1: *week1
+         6: *week6
+         7: *week7
+      price: $340
+      img:
+         url: /images/Photos/Summer_General/2012trustfalls.JPG
+         width: 154
+         height: 237
+         hspace: 5
+         vspace: 5
+         align: left
+         border: 2
          
-         
-dates:
-   - index: 1
-     type: week
-     week: week 1
-     date: June 5-10, 2012
-   - index: 2
-     type: weekend
-     week: weekend 1
-     date: June 12-17, 2012
-   - index: 3
-     type: week
-     week: week 3
-     date: June 17-19, 2012
+
+camp_weeks:
+   - order: 1
+     week: *week1
+     camps:
+         - info: *pathfinders
+         - info: *treetoppers
+         - info: 
