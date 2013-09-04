@@ -1,0 +1,16 @@
+{% extends "base.j2" %}
+{% block mainContainerContents %}
+<div class="specfloat">
+<!--this is the main left area container which contains a narrower div to provide for a margin between the left and right float divs-->
+<div class="specfloatinterior">
+<!--main text container-->
+
+{% block MainText %}
+{%endblock%}
+
+<!--close specfloatinterior below -->
+</div>
+
+<!--closing specfloat container below-->
+</div>
+{% endblock %}

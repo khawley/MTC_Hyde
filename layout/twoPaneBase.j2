@@ -1,0 +1,38 @@
+{% extends "base.j2" %}
+{% block mainContainerContents %}
+<div class="floatLeft">
+<!--this is the main left area container which contains a narrower div to provide for a margin between the left and right float divs-->
+   
+   <div class="leftInterior">
+   <!--main text container-->
+      {% block MainText %}
+      {%endblock%}
+   <!--close main text container below -->
+   </div>
+
+<!--closing main left float container below-->
+</div>
+
+
+<div class="floatRight">
+<!--this is the main RIGHT area container-->
+   <div class="rightInterior">
+      <div style="background-color:#537435; color:white;">
+      <h3 align="center" class="whiteHeader3"><B>{%block SidebarTitle %}{%endblock%}</B></h3>
+      </div>
+      
+      <div class="eventsContainer">
+         <div align="center">
+            {%block SidebarText %}
+            {%endblock%}
+         </div>
+      </div>
+     
+   <!-- closing rightInterior container below -->
+   </div>
+
+
+
+<!--closing main RIGHT float container below-->
+</div>
+{% endblock %}
