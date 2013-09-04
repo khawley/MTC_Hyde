@@ -1,87 +1,59 @@
-{# Generates the main and basic menu from context data in the site's
-   configuration file.
-#}
-{% macro render_basic_menu() -%}
-<ul class="basic">
-{% for menu_item in menu %}
-    <li><a {% if (menu_item.url == resource.relative_path) %}class="selected" {% endif -%}
-        href="{{ content_url(menu_item.url) }}">{{ menu_item.title }}</a></li>
-{% endfor %}
-</ul>
-{%- endmacro %}
-
-
-{# Generates the advanced menu from all files located in the content/advanced
-   folder. Only advanced section files have 'index' metadata, so we can be
-   certain that no other files will creep in.
-#}
-{% macro render_advanced_menu() -%}
-<ul class="advanced">
-{% for res in site.content.walk_resources_sorted_by_index() %}
-    <li><a {% if (res.url == resource.url) %}class="selected" {% endif -%}
-        href="{{ res.full_url }}">{{ res.meta.title }}</a></li>
-{% endfor %}
-</ul>
-{%- endmacro %}
-
-
-{# Advanced topics macro. Renders navigation at the end of an advanced
-   article. It also depends on 'index' metadata.
-#}
-{% macro render_bottom_article_nav() %}
-<div class="bottom_article_nav">
-{% if resource.next_by_index is not none -%}
-    <div class="next"><a href="{{ resource.next_by_index.full_url }}">
-    {{ resource.next_by_index.meta.title }}</a>
-    &gt;</div>
-{%- endif %}
-
-{% if resource.prev_by_index is not none -%}
-    <div class="prev">&lt; <a href="{{ resource.prev_by_index.full_url }}">
-    {{ resource.prev_by_index.meta.title }}</a>
-    </div>
-{%- endif %}
-</div>
-{% endmacro %}
-
-
-
 {% macro render_camp_info() %}
+
 {% for camp in summer.camp_names %}
-{%if (camp.name == resource.meta.name) %}
+{%if (camp.info.name == resource.meta.name) or (camp.info.name == resource.meta.title) %}
 
 <table width="537" border="0">
   <tr>
-    <td width="375"><h1>{{camp.name}}</h1></td>
+    <td width="375"><h1>{{camp.info.name}}</h1></td>
     <td width="152" align="right">
-       <button onClick=
-    "window.open('{{online_reg}}')">
-    Register Online Now</button> 
-    
+       {{register_button}} 
     </td>
   </tr>
 </table>
 
 {% filter markdown %}
-**_Youth Grades {{camp.grade}}_**
+{% if camp.info.grade and camp.subheader%}
+**_ {{camp.info.subheader}}  
+Youth Grades {{camp.info.grade}}_**
+{% elif camp.info.subheader %}
+**_{{camp.info.subheader}}_**
+{% elif camp.info.grade %}
+**_Youth Grades {{camp.info.grade}}_**
+{%endif%}
 {%endfilter%}
 
-{%if camp.img %}
-<img src="{{camp.img.url}}" name="{{camp.name}}" width="{{camp.img.width}}" height="{{camp.img.height}}" hspace="{{camp.img.hspace}}" vspace="{{camp.img.vspace}}" border="{{camp.img.border}}" align="{{camp.img.align}}">
+{%if camp.info.img %}
+<img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
 {%endif%}
+
 
 {% filter markdown %}
-{%for no, week in camp.week %}
-**_{{camp.name}}  {{no}}: {{week}}_**  
+{%for no, week in camp.info.weeks %}
+**_{{camp.info.name}}  {{no}}: {{week.date}}_**  
 {%endfor%}
 
-####Prices:
-{% for no, price in camp.price %}
- **_{{camp.name}} {{no}}:_** {{price}}  
+{% if camp.info.price %}
+####Price: **_{{camp.info.price}}_**
+{% elif camp.info.prices %}
+####Prices:  
+{% for no, price in camp.info.prices %}
+ **_{{camp.info.name}} {{no}}:_**  {{price}}  
 {%endfor%}
+{%endif%}
 {%endfilter%}
+<br>
 
 {%endif%}
-{%endfor%}
+{%endfor%} {# ends for camp in summer.camp_names #}
+
+{% endmacro %}
+
+
+
+{% macro create_summer_calendar() %}
+
+<table id="summer_sched">
+
 
 {% endmacro %}
