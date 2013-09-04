@@ -1,10 +1,59 @@
-camp_weeks:
-   - order: 1
-     week: week 1
-     date: June 5-10
-     camps:
-         - name: Pathfinders
-         - name: Tree Toppers
+dates:
+   - week: &week1
+         index: 1.0
+         type: week
+         date: Jun 15 - 20, 2014
+         short_name: week 1
+   - week: &week2
+         index: 2.0
+         type: week
+         date: Jun 22 - 27, 2014
+         short: week 4
+   - week: &week3
+         index: 3.0
+         type: week
+         date: Jun 29 - Jul 4, 2014
+         short: week 3
+   - week: &week4
+         index: 4.0
+         type: week
+         date: Jul 6 - 11, 2014
+         short: week 4
+   - week: &weekend4
+         index: 4.5
+         type: weekend 4
+         date: Jul 11 - 13, 2014
+         short:
+   - week: &week5
+         index: 5.0
+         type: week
+         date: Jul 13 - 18, 2014
+         short: week 5
+   - week: &weekend5
+         index: 5.5
+         type: week
+         date: Jul 18 - 20, 2014
+         short: weekend 5
+   - week: &week6
+         index: 6.0
+         type: week
+         date: Jul 20 - 25, 2014
+         short: week 6
+   - week: &weekend6
+         index: 6.5
+         type: weekend
+         date: Jul 25 - 27, 2014
+         short: weekend 6
+   - week: &week7
+         index: 7.0
+         type: week
+         date: Jul 27 - Aug 1, 2014
+         short: week 7
+   - week: &week8
+         index: 8.0
+         type: week
+         date: Aug 3 - 8, 2014
+         short: week 8
          
          
 camp_names:
