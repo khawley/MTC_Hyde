@@ -51,6 +51,17 @@ div.footerLinks {position:relative; float:none; width:575px; margin-left:auto; p
 div.specfloat{float:center; width:830px ; margin-bottom:20px;}
 div.specfloatinterior{position:relative;margin-left:45px; width:810px; font-family: Arial, Helvetica, sans-serif;}
 
+div.floatLeftSummerHome {float:left; width:65%; margin-bottom:20px;}
+div.leftInteriorSummerHome {
+	position:relative;
+	margin-left:48px;
+	width:90%;
+	font-family:Arial, Helvetica, sans-serif;
+}
+div.floatRightSummerHome {float:right; width:35%; font-family:Arial, Helvetica, sans-serif;}
+div.rightInteriorSummerHome {width:90%; margin-top:0px; margin-bottom:20px;}
+
+
 /* used in alumni sub menus  - DO NOT CHANGE */
 #sddm{margin: 0;	padding: 0;	z-index: 30}
 #sddm li{margin: 0;	padding: 0;	list-style: none;	float: left;	font: bold 14px arial}
@@ -67,14 +78,27 @@ ul.formatted ul {font-family:Arial, Helvetica, sans-serif; font-size:14px; color
 
 /* unordered list to match the font types of our site, with little to no gaps between the list items */
 ul.formatted2 {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:3px; margin-left:20px; padding-left:.2em;}
-ul.formatted2 li {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:px; margin-left:20px; padding-left:.1em;}
+ul.formatted2 li {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:3px; margin-left:20px; padding-left:.1em;}
 ul.formatted2 ul {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:5px; margin-left:15px; padding-left:.1em;}
+
+ul.formatted3 {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:3px; margin-left:7px; padding-left:5px;}
+ul.formatted3 li {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:3px; margin-left:7px; padding-left:5px;}
+ul.formatted3 ul {font-family:Arial, Helvetica, sans-serif; font-size:14px; color:#383838; margin-top:0px; margin-bottom:5px; margin-left:7px; padding-left:5px;}
 
 .center{
 	margin-right:auto;
 	margin-left: auto;
 	display: block;
 	text-align:center;
+}
+
+.grey_table .category{
+   text-align: center;
+   background-color: #999999;
+}
+.grey_table td{
+   background-color: #cccccc;
+   text-align: left;
 }
 
 /******************
