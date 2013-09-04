@@ -1,0 +1,50 @@
+---
+title: Trailblazers
+keywords: high school, youth, on-site, camp
+description: High school youth form a community that explores the Bible while enjoying activities like the ropes course and swimming
+---
+
+{% block MainText %}
+
+{{ macros.render_camp_info() }}
+
+{% filter markdown %}
+Ready to step up your adventure at Mt. Cross? The Trailblazers program allows campers to grow in community with fellow campers, get up in the trees on   Mt. Cross' high ropes course, have a beach adventure day and spend time   in God's word and creation. This camp experience allows campers to   experience all that camp has to offer. 
+
+Fee includes lodging, meals, staff, summer programs, 5x7 camp photo and more.
+
+{%endfilter%}
+<br>
+
+{% include "socialShare.j2" %}
+
+<h4 align="center"><a href="/program/summer/summer_camp.html#SummerSchedule">Return to Summer Schedule</a></h4>
+{%endblock%}
+
+
+
+{% block SidebarTitle %}Sample Daily Schedule{%endblock%}
+{% block SidebarText %}
+{% filter markdown %}
+**Sunday**  
+Arrive & Check-in  
+
+**Monday**  
+Challenge Course Programming  
+Activity choices  
+
+**Tuesday**
+Theme day events  
+
+**Wednesday**  
+Beach day  
+Cookout dinner  
+Prayer Around the Cross  
+
+**Thursday**  
+High Ropes  
+
+**Friday**  
+Clean up & Depart
+{%endfilter%}
+{%endblock%}
