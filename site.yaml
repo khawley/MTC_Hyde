@@ -22,6 +22,8 @@ context:
         yr_rnd: yr_rnd.yaml
     data:
         online_reg: "https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883"
+        current_year: 2014
+        register_button: <button onClick="window.open('https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883')">Register Online Now</button>
         author:
             name: Merlin Rebrović
             url: "http://merlin.rebrovic.net"
@@ -49,7 +51,6 @@ meta:
     # a great way of simply adding or modifying properties of a very large
     # number of files.
     nodemeta: meta.yaml
-    ga_tracking_code: XX-XXXXXXXX-X
 
 sorter:
     name: # the name of the sorter (no pun intended)
