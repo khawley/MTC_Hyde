@@ -1,0 +1,115 @@
+---
+title: Tree Toppers
+keywords: youth, camp, week long
+description: Camp for ages 8-13 with many opportunities to swim, hike, learn archery and study the Bible. Tree Topper campers also have the ability to cook out several of their meals!
+
+---
+
+{% block MainText %}
+
+{# macro copied and edited #}
+{% for camp in summer.camp_names %}
+{%if (camp.info.name == resource.meta.name) or (camp.info.name == resource.meta.title) %}
+
+<table width="537" border="0">
+  <tr>
+    <td width="375"><h1>{{camp.info.name}}</h1></td>
+    <td width="152" align="right">
+       <button onClick=
+    "window.open('{{online_reg}}')">
+    Register Online Now</button> 
+    
+    </td>
+  </tr>
+</table>
+
+{% filter markdown %}
+
+{% if camp.info.grade and camp.subheader%}
+**_ {{camp.info.subheader}}  
+Youth Grades {{camp.info.grade}}_**
+{% elif camp.info.subheader %}
+**_{{camp.info.subheader}}_**
+{% elif camp.info.grade %}
+**_Youth Grades {{camp.info.grade}}_**
+{%endif%}
+
+{%endfilter%}
+
+
+{% filter markdown %}
+{%for no, week in camp.info.weeks %}
+**_{{camp.info.name}}  {{no}} {%if no == "4" %}*(grades 7-9){%else%}(grades 4-6){%endif%}: {{week.date}}_**  
+{%endfor%}
+
+{%if camp.info.img %}
+<img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
+{%endif%}
+
+{% if camp.info.price %}
+####Price: **_{{camp.info.price}}_**
+{% elif camp.info.prices %}
+####Prices:  
+{% for no, price in camp.info.prices %}
+ **_{{camp.info.name}} {{no}}:_**  {{price}}  
+{%endfor%}
+{%endif%}
+{%endfilter%}
+
+
+{%endif%}
+{%endfor%} {# ends for camp in summer.camp_names #}
+
+{# end of modified macro #}
+
+
+{% filter markdown %}
+Imagine looking up at stars as you sleep under towering   Redwood trees in the Mt. Cross Treehouse. Tree Topper campers plan daily schedule that might include:   trekking down the creek, working together as a team on the challenge course, building a fort, swimming, crafts, archery or other new ideas your group comes up with. 
+
+Each day experience digging into God's Story through Bible Encounter and devotion times. PLUS have the opportunity to cook out   several meals. Limited to 24 campers each session. 
+
+Fee includes lodging, meals, staff, summer programs, 5x7 camp photo and more.
+
+Stay two weeks using [Connections][connectionsLink] options (or use Connections for a Saturday or Sunday pickup time.)
+
+
+[connectionsLink]: /program/summer/connections.html
+{%endfilter%}
+
+<object id="vp1gsGc0" width="432" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1gsGc0" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="432" height="240"></embed></object>
+<br>
+
+{% include "socialShare.j2" %}
+
+<h4 align="center"><a href="/program/summer/summer_camp.html#SummerSchedule">Return to Summer Schedule</a></h4>
+{%endblock%}
+
+
+
+{% block SidebarTitle %}Sample Daily Schedule{%endblock%}
+{% block SidebarText %}
+<div align="left">
+{% filter markdown %}
+8:00am Wake up  
+8:30am Breakfast  
+9:45am Camp Clean-up  
+10:00am Opening  
+10:15am Activities/Bible Encounter  
+12:30pm Lunch  
+1:15pm FOB (Rest time)  
+1:45pm Activities  
+3:30pm [Trading Post][tradingpostLink]  
+Continue Activities  
+6:00pm Campfire Cookout*  
+7:15pm All-Camp Activity  
+8:15pm Trading Post  
+8:45pm Campfire Devotions  
+9:00pm Showers and Cabin Time  
+10:00pm Lights Out
+
+*Tree Top campers cookout one meal a day.
+
+[tradingpostLink]: /about/tradingpost.html
+{%endfilter%}
+</div>
+{%endblock%}
