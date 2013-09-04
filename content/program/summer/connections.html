@@ -1,0 +1,47 @@
+---
+title: Connections
+keywords: elementary, jr high, camp
+description: Camp for ages 8-13 with hiking, archery, crafts, team work on the challenge course and other activities as well as Bible Encounters.
+
+name: Connections
+---
+
+{% block MainText %}
+
+{{ macros.render_camp_info() }}
+
+{% filter markdown %}
+Use Connections to connect two weeks of camp or   provide for Saturday or Sunday pick up. Campers stay at camp  for a    "low key" and casual experience with Mt. Cross staff. They    enjoy time for activites and evening campfire devotions.
+
+Connections MUST be connected to _at least_ ONE week-long camp program. This can be used as an option for parents who cannot make a Friday pick-up due to work or other constraints.
+
+{%endfilter%}
+
+{% include "socialShare.j2" %}
+
+<h4 align="center"><a href="/program/summer/summer_camp.html#SummerSchedule">Return to Summer Schedule</a></h4>
+{%endblock%}
+
+
+
+{% block SidebarTitle %}Sample Schedule{%endblock%}
+{% block SidebarText %}
+<div align="left">
+{% filter markdown %}
+**Friday**  
+Check-in  
+5:30pm  
+Dinner
+
+**Saturday**  
+8:30am Breakfast  
+12:00pm Lunch  
+5:30pm Dinner
+  
+**Sunday**  
+8:30am Breakfast  
+12:00pm Lunch
+
+{%endfilter%}
+</div>
+{%endblock%}
