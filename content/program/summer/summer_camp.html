@@ -4,15 +4,17 @@ title: Summer Camp Home
 keywords: youth, child, kids, children, camp, all ages
 description: Overview of the different summer camps available to all ages offered at Mt. Cross.
 ---
-
+{% block HTMLheadExtended %}<link rel="stylesheet" href="/CSS/summer_table.css" type="text/css" media="screen">{%endblock%}
 {% block mainContainerContents %}
 
 <div class="specfloat">
 <div class="specfloatinterior">
 <h1>Summer Camp</h1>
 <table width="100%"><tr>
-   <td><p style="font-size:20px; margin-bottom:3px"><b>Summer Theme: FAITH ALIVE</b></p>
-      <p><b><i>"Let all that you do be one in Love." 1 Corinthians 16:14</i></b></p>
+   <td><p style="font-size:20px; margin-bottom:3px"><b>Summer Theme: {{summer.info.theme}}</b></p>
+      {% if summer.info.verse %}
+      <p><b><i>{{summer.info.verse}}</i></b></p>
+      {% endif %}
    </td><td align="center">
       <p><b><i><a href='#SummerSchedule'>View Full Summer Schedule</a></i></b><br>
       {{register_button}}</p>
@@ -23,7 +25,8 @@ description: Overview of the different summer camps available to all ages offere
 
 <div class="floatLeftSummerHome">
 <div class="leftInteriorSummerHome">
-   <p><a href="http://www.lomnetwork.org/resources/curriculumregularprices.html"><img  src="/images/Photos/Summer_General/Faith_alive_cover_colorSMALL.jpg" alt="Faith Alive" border="2" style="text-align:center; vertical-align:middle; margin-left:10%"></a></p>
+   <p><a href="http://www.lomnetwork.org/resources/curriculumregularprices.html">
+   <img  src="{{summer.info.graphic.url}}" alt="{{summer.info.theme}}" border="{{summer.info.graphic.border}}" style="text-align:center; vertical-align:middle; margin-left:10%" {% if summer.info.graphic.width and summer.info.graphic.height %} width="{{summer.info.graphic.width}}" height="{{summer.info.graphic.height}}"{% endif %} ></a></p>
    <p>Camps include activities such as swimming, hiking, campfire cookouts,  Bible encounters and campfire devotions, and the Challenge Course (high ropes and low ropes elements).</p>
    <p>Cabin groups create their activity schedule from a list of age appropriate activities, participate in all camp activities, spend time at the <a href="/about/tradingpost.html">Trading Post</a> and feast on quality camp food including a main entree', and a salad bar with fresh vegetable and fruit selections.</p>
    <p>Campers can invite friends, select cabinmates or come alone to meet new friends. Combine several camps with <a href="/program/summer/connections.html">Connections</a> or use <a href="/program/summer/connections.html">Connections</a> for a Saturday or Sunday pick-up.</p><br>

@@ -1,3 +1,12 @@
+info:
+   theme: "Living in God's Time"
+   verse: ""
+   graphic:
+      url: /images/Photos/Summer_General/Faith_alive_cover_colorSMALL.jpg
+      width: 
+      height: 
+      border: 2
+      
 dates:
    - week: &week1
          index: 1.0
