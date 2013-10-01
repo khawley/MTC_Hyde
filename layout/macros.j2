@@ -50,10 +50,97 @@ Youth Grades {{camp.info.grade}}_**
 {% endmacro %}
 
 
-
 {% macro create_summer_calendar() %}
-
 <table id="summer_sched">
-
-
+   <tr>
+      <th></th>
+      {% for g in summer.ages %}
+         {% if g.grades.text != "all" %}
+            <th colspan="{{g.grades.cols}}"><p>{{g.grades.text}} Graders</p></th>
+         {% endif %}
+      {%endfor%}
+   </tr>
+   {% for w in summer.dates %}{% with w_info = w.week %} {# loop through rows #}
+      {% if w_info.type != "special" %}
+      <tr {% if w_info.type != "week" %} class="wknd" {%endif%}>
+         <td class="date"><p>{{w_info.short_name|capitalize}}<br>{{w_info.date}}</p></td>
+         
+         {% for g in summer.ages %} {% with g_info = g.grades %}{# loop through columns #}
+            {#######################}
+            {% if g_info.index == 1 %}
+               <td id="{{g_info.index}}_{{w_info.start}}">
+               {% for c in summer.camp_names %}{% with camp = c.info %}
+                  {% for no, wk in camp.weeks %}
+                     {% if w_info.start == wk.start and camp.grade.text == "all" %}
+                        <p><a href="{{camp.url}}" >{{camp.name}} {{no}}</a></p>
+                        <script>
+                           $("#{{g_info.index}}_{{w_info.start}}").attr('colspan', 3);
+                        </script>
+                     {% elif w_info.start == wk.start and camp.grade.text == g_info.text %}
+                        <p><a href="{{camp.url}}" >{{camp.name}} {{no}}</a></p>
+                     {%endif%}
+                  {%endfor%}
+               {% endwith %}{%endfor%}
+               </td>
+            {#######################}
+            {% elif g_info.index == 4 %}
+               {% for c in summer.camp_names %}{% with camp = c.info %}
+                  {% if camp.grade.text == g_info.text and camp.name == "CIT"%}
+                     {% for no, wk in camp.weeks %}
+                        {% if w_info.start == wk.start %}
+                        <td id="{{g_info.index}}_{{w_info.start}}_{{camp.name}}" class="{{camp.name}}">
+                           <p><a href="{{camp.url}}" >{{camp.name}} {{no}}</a></p>
+                           <script>
+                              $("#{{g_info.index}}_{{w_info.start}}_{{camp.name}}").attr('rowspan', {{camp.duration}});
+                           </script>
+                        </td>
+                        <td id="{{g_info.index}}_{{w_info.start}}_{{camp.name_2}}" class="{{camp.name_2}}">
+                           <p><a href="{{camp.url}}" >{{camp.name_2}} {{no}}</a></p>
+                           <script>
+                              $("#{{g_info.index}}_{{w_info.start}}_{{camp.name_2}}").attr('rowspan', {{camp.duration}});
+                           </script>
+                        </td>
+                        <td id="{{g_info.index}}_{{w_info.start}}_{{camp.name_3}}" class="{{camp.name_3}}">
+                           <p><a href="{{camp.url}}" >{{camp.name_3}} {{no}}</a></p>
+                           <script>
+                              $("#{{g_info.index}}_{{w_info.start}}_{{camp.name_3}}").attr('rowspan', {{camp.duration}});
+                           </script>
+                        </td>
+                        {% endif %}
+                     {%endfor%}
+                  {%endif%}
+               {% endwith%}{%endfor%}
+            {#######################}
+            {% elif g_info.text != "all" and w_info.type != "weekend"%}
+            <td id="{{g_info.index}}_{{w_info.start}}">
+               {% for c in summer.camp_names %}{% with camp = c.info %}
+                  {% if camp.grade.text == g_info.text %}
+                     {% for no, wk in camp.weeks %}
+                        {%if w_info.start == wk.start and camp.grade.text != "all"%}
+                           <p><a href="{{camp.url}}" >{{camp.name}} {{no}}</a></p>
+                        {%endif%}
+                     {%endfor%}
+                  {%endif%}
+               {% endwith %}{%endfor%}
+            </td>
+            {% endif %}
+         
+         {% endwith %}{%endfor%}
+      </tr>
+      {% endif %} {# ends if w.week.type != "special" #}
+   {%endwith%}{% endfor %} {# ends for w in summer.dates #}
+</table>
+<script> 
+   $("#summer_sched tr td").toggleClass(function(){
+      if ($(this).children().is("p")){
+         return "";
+      }
+      else{
+         return "empty";
+      }
+      
+   });
+</script>
 {% endmacro %}
+
+
