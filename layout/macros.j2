@@ -5,16 +5,16 @@
 
 <table width="537" border="0">
   <tr>
-    <td width="375"><h1>{{camp.info.name}}</h1></td>
-    <td width="152" align="right">
-       {{register_button}} 
-    </td>
+   <td width="375"><h1>{{camp.info.name}}</h1></td>
+   <td width="152" align="right">
+      {{register_button}} 
+   </td>
   </tr>
 </table>
 
 {% filter markdown %}
 {% if camp.info.grade and camp.subheader%}
-**_ {{camp.info.subheader}}  
+**_ {{camp.info.subheader}}    
 Youth Grades {{camp.info.grade}}_**
 {% elif camp.info.subheader %}
 **_{{camp.info.subheader}}_**
