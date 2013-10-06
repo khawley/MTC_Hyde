@@ -67,8 +67,8 @@ var gallery = {
 		elementSelector: "div.imageElement",
 		titleSelector: "h3",
 		subtitleSelector: "p",
-		linkSelector: "a.open",
-		imageSelector: "img.full",
+		linkSelector: "a.opengallery",
+		imageSelector: "img.fullgallery",
 		thumbnailSelector: "img.thumbnail",
 		defaultTransition: "fade",
 		/* InfoPane options */
@@ -130,7 +130,7 @@ var gallery = {
 		
 		if ((this.options.embedLinks)|(this.options.useReMooz))
 		{
-			this.currentLink = new Element('a').addClass('open').setProperties({
+			this.currentLink = new Element('a').addClass('opengallery').setProperties({
 				href: '#',
 				title: ''
 			}).injectInside(element);

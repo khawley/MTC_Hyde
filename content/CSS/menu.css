@@ -1,16 +1,40 @@
-/* used Tiny Dropdown menu*/
-ul.menu {list-style:none;margin:0px;padding:0;}
-ul.menu * {font-family: Arial,Helvetica,sans-serif; font-size: 14px;color:#ffffff; text-align:left;position:relative;margin:0;padding:0;}
-ul.menu a {display:block;color:#000;text-decoration:none;}
-ul.menu li {position:relative;float:left;}
-ul.menu ul {position:absolute;background:#E6BA85;display:none;opacity:0;list-style:none;width:175px}
-ul.menu ul li {position:relative;border:0px;margin:0;}
-ul.menu ul li a {width:155px;display:block;padding:5px 10px 7px;background-color:#E6BA85;}
-ul.menu ul li a:hover {background-color: #F2DCC2;}
-ul.menu ul ul {left:100%;top:-1px}
-ul.menu .right{left:-100%;top:-1px;}
-ul.menu .menulink {padding:6px 20px;background:#7D241A;width:auto;color:#fff;text-align:center;font-weight:bold;font-size: 18px;}
-ul.menu .menulink:hover, ul.menu .menuhover {background:#E6BA85; color:#000;}
-ul.menu .sub { background:#E6BA85 url(/TinyDropdown/arrow.gif) no-repeat;background-position: 95% 50%;}.pink {
-	color: #F0F;
+#menu, #menu a, #menu li{
+   background-color: #7D241A;
+   color: #ffffff;
+   border: 0;
 }
+#menu .open a,
+#menu .dropdown-menu, #menu .dropdown-submenu,
+ #menu .dropdown-menu li, #menu .dropdown-submenu li, 
+ #menu .dropdown-menu li a, #menu .dropdown-submenu li a{
+   background-color: #E6BA85;
+   color: #000;
+   border: 0;
+}
+/* specific settings for MTC navbar colorings */
+.navbar-default .navbar-nav>.dropdown>a .caret {
+   border-top-color: #fff;
+   border-bottom-color: #fff;
+}
+#spec_caret, #spec_caret a:hover, #spec_caret a:focus{
+   border-top-color: #fff;
+   border-bottom-color: #fff;
+}
+.navbar-default .navbar-nav>.open>a .caret, .navbar-default .navbar-nav>.open>a:hover #spec_caret, .navbar-default .navbar-nav>.open>a:focus #spec_caret{
+   border-top-color: #000;
+   border-bottom-color: #000;
+}
+#menu .dropdown-menu .divider {
+   height: 1px;
+   margin: 9px 0;
+   overflow: hidden;
+   background-color: #000;
+}
+
+/* submenu css added for bootstrap 3.0 */
+.dropdown-submenu{position:relative;}
+.dropdown-submenu>.dropdown-menu{top:0;left:100%;margin-top:-6px;margin-left:-1px;-webkit-border-radius:0 6px 6px 6px;-moz-border-radius:0 6px 6px 6px;border-radius:0 6px 6px 6px;}
+.dropdown-submenu:hover>.dropdown-menu{display:block;}
+.dropdown-submenu>a:after{display:block;content:" ";float:right;width:0;height:0;border-color:transparent;border-style:solid;border-width:5px 0 5px 5px;border-left-color:#000000;margin-top:5px;margin-right:-10px;}
+.dropdown-submenu:hover>a:after{border-left-color:#000000;}
+.dropdown-submenu.pull-left{float:none;}.dropdown-submenu.pull-left>.dropdown-menu{left:-100%;margin-left:10px;-webkit-border-radius:6px 0 6px 6px;-moz-border-radius:6px 0 6px 6px;border-radius:6px 0 6px 6px;}
