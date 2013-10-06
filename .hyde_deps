@@ -84,8 +84,22 @@
 !!python/unicode 'menuh.js': []
 !!python/unicode 'program/education_fall.html': [affiliateLinks.j2, HTMLhead.j2, base.j2,
   bannerNav.j2, twoPaneBase.j2, macros.j2, infoFooter.j2]
+!!python/unicode 'program/retreats/adults_men.html': [affiliateLinks.j2, HTMLhead.j2,
+  base.j2, bannerNav.j2, twoPaneBase.j2, macros.j2, infoFooter.j2]
+!!python/unicode 'program/summer/CIT_Program.html': [affiliateLinks.j2, socialShare.j2,
+  base.j2, HTMLhead.j2, twoPaneBase.j2, macros.j2, infoFooter.j2, bannerNav.j2]
+!!python/unicode 'program/summer/adventures.html': [affiliateLinks.j2, socialShare.j2,
+  base.j2, HTMLhead.j2, twoPaneBase.j2, macros.j2, infoFooter.j2, bannerNav.j2]
+!!python/unicode 'program/summer/beach.html': [affiliateLinks.j2, socialShare.j2,
+  base.j2, HTMLhead.j2, twoPaneBase.j2, macros.j2, infoFooter.j2, bannerNav.j2]
 !!python/unicode 'program/summer/connections.html': [affiliateLinks.j2, socialShare.j2,
   base.j2, HTMLhead.j2, twoPaneBase.j2, macros.j2, infoFooter.j2, bannerNav.j2]
+!!python/unicode 'program/summer/day_camp.html': [affiliateLinks.j2, HTMLhead.j2,
+  base.j2, bannerNav.j2, twoPaneBase.j2, macros.j2, infoFooter.j2]
+!!python/unicode 'program/summer/day_camp_resources.html': [affiliateLinks.j2, HTMLhead.j2,
+  onePaneBase.j2, base.j2, bannerNav.j2, macros.j2, infoFooter.j2]
+!!python/unicode 'program/summer/day_camp_schedule.html': [affiliateLinks.j2, HTMLhead.j2,
+  base.j2, bannerNav.j2, twoPaneBase.j2, macros.j2, infoFooter.j2]
 !!python/unicode 'program/summer/explorers.html': [affiliateLinks.j2, socialShare.j2,
   base.j2, HTMLhead.j2, twoPaneBase.j2, macros.j2, infoFooter.j2, bannerNav.j2]
 !!python/unicode 'program/summer/pathfinders.html': [affiliateLinks.j2, socialShare.j2,
