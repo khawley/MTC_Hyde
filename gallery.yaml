@@ -1,14 +1,18 @@
 page:
    - url: "index.html"
+     id: "home"
      imgs:
         - link: /program/retreats/adults.html
           src: /images/Banners/men-womenBANNER.jpg
+          index: 0
         - link: /rentals/retreats.html
           src: /images/Banners/PLan your own retreat.jpg
         - link: /about/alumni/alumni_update.html
           src: /images/Banners/alumni banner 2.jpg
+          index: 1
           
    - url: "example"
+     id: "example"
      imgs:
         - link: something
           src: yup

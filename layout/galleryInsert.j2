@@ -1,26 +1,39 @@
 {% for page in gallery.page %}
 
 {% if (page.url == resource.relative_path) %}
-<script type="text/javascript">
-	function startGallery() {
-		var myGallery = new gallery($('myGallery'), {
-			timed: true,
-			showCarousel: false,
-			showInfopane: false
-		});
-	}
-	window.addEvent('domready', startGallery);
+
+<div id="carousel-{{page.id}}" class="carousel slide">
+   <!-- Indicators -->
+   <ol class="carousel-indicators">
+      {% for img in page.imgs %}
+         <li data-target="#carousel-{{page.id}}" class="{%if img.index ==0 %} active {%endif%}"></li>
+      {%endfor%}
+   </ol>
+
+   <!-- Wrapper for slides -->
+   <div class="carousel-inner">
+      {% for img in page.imgs %}
+         <div class="item {%if img.index ==0 %} active {%endif%}">
+            <a href="{{img.link}}">
+               <img src="{{img.src}}" >
+            </a>
+         </div>
+      {%endfor%}
+   </div>
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-{{page.id}}" data-slide="prev">
+    <span class="icon-prev"></span>
+  </a>
+  <a class="right carousel-control" href="#carousel-{{page.id}}" data-slide="next">
+    <span class="icon-next"></span>
+  </a>
+</div>
+
+<script>
+   $('.carousel').carousel('cycle');
 </script>
-<div id="myGallery" onload="set_banner()">
 
-{% for img in page.imgs %}
-<div class="imageElement">
-   <a href="{{img.link}}" class="opengallery"></a>
-   <img src="{{img.src}}" class="fullgallery">
-</div>
-{%endfor%}
-
-</div>
 <br>
 
 {%endif%}
