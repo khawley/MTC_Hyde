@@ -1,3 +1,4 @@
 deploy/*
 src/*
 content/images/*
+.hyde_deps
