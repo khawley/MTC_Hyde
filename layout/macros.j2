@@ -1,3 +1,87 @@
+{% macro render_prog_info() %}
+{% for item in yr_rnd.info %}{%for k, p in item %}
+{% if (p.program == resource.meta.name) %}
+
+<h1>{{p.program}}</h1>
+<table width="497" border="0">
+  <tr>
+    <td width="314" height="60">
+    <p>
+    {% for text, date in p.dates %}
+       {%if text == "weekend" %}
+       <strong><em>The weekend of {{date}}</em></strong><br>
+       {%endif%}
+       {% if text == "saturday" %}
+       <em>Saturday Only {{date}} 9:30am-6pm</em>
+       {%endif%}
+    {%endfor%}
+    </p></td>
+    <td width="173" valign="top">
+       <h2 align="center" class="pink">Registration OPEN below!</h2> </td>
+  </tr>
+</table>
+{% endif %}
+{%endfor %}{%endfor%}
+
+{% endmacro %}
+
+{% macro render_prog_pricing() %}
+
+{% for item in yr_rnd.info %}{%for k, p in item %}
+{% if (p.program == resource.meta.name) %}
+<ul class="formatted">
+   {%for r_text, date in p.reg_dates %}
+      {%if r_text == "early" %}
+      {%for type, p_dict in p.prices %}
+         {% if type == r_text %}
+         <li>EARLY Registration
+         <ul class="formatted2">
+         {% for text, price in p_dict %}
+              <li>{{text}}: {{price}}</li>
+         {%endfor%}
+         </ul>
+         </li>
+         {%endif%}
+      {%endfor%}
+      {%elif r_text == "general" or r_text == "regular" %}
+      {%for type, p_dict in p.prices %}
+         {% if type == r_text %}
+         <li>Regular Registration (Postmarked ON or AFTER {{date}})
+         <ul class="formatted2">
+         {% for text, price in p_dict %}
+              <li>{{text}}: {{price}}</li>
+         {%endfor%}
+         </ul>
+         </li>
+         {%endif%}
+      {%endfor%}
+      {%elif r_text == "late"%}
+      {%for type, p_dict in p.prices %}
+         {% if type == r_text %}
+         <li>LATE Registration (Postmarked ON or AFTER {{date}})
+         <ul class="formatted2">
+         {% for text, price in p_dict %}
+              <li>{{text}}: {{price}}</li>
+         {%endfor%}
+         </ul>
+         </li>
+         {%endif%}
+      {%endfor%}
+      {% endif%}
+   {%endfor%}
+   <br>
+     <p>Registration is on a first-come-first-serve bases for lodging and accommodations. Early accommodations will include staying in one of our two Lodge facilities and include linens and a towel. <br><br>
+
+Once our Lodges are full, we will start housing in our dorm style cabins. You will need to bring a sleeping bag, pillow, and towel of your own in those facilities.
+     
+   </p>
+</ul>
+ 
+{%endif%}
+{%endfor%}{%endfor%}
+
+{%endmacro%}
+
 {% macro render_camp_info() %}
 
 {% for camp in summer.camp_names %}

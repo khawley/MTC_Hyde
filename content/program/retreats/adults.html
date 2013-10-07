@@ -1,0 +1,50 @@
+---
+title: Adult Retreats
+keywords: adult programs, adult camps
+description: Get more information on the Fall Women&apos;s Retreat, Build Your Own Retreat and Build Your Own Fall Starter Retreat.
+
+name: Adult Retreats
+extends: onePaneBase.j2
+---
+
+{% block MainText %}
+
+<h1>Adult Retreats</h1>
+<p><em>Congregational, Leadership and Planning Retreats</em></p>
+<img src="/images/Photos/Women's Retreat/2011 Women's retreat posed.JPG" alt="women's retreat" width="300" height="225" border="3" hspace="10" align="right">
+{% for item in yr_rnd.info %}{%for k, p in item %}
+{% if p.grades == "" %}
+   <p><strong><em>{{p.program}}</em></strong><br>
+      {% for text, date in p.dates %}
+         <strong>{{text|capitalize}}{% if text=="saturday"%}-Only{%endif%}:</strong> {{date}}<br>
+      {% endfor %}
+      {{p.short_description}}<br>
+      <a href="{{p.url}}">More Information</a>
+   </p>
+{% endif %}
+{%endfor%}{%endfor%}
+
+<hr style="width:100%; margin-top:0px; margin-bottom:0px;" /><br>
+<p><strong>Build Your Own Retreat</strong><br>
+  Mt. Cross staff would like to support you in planning
+  your own adult retreat event at Mt. Cross. <a href="/rentals/rentals_tips.html">Read more...</a>
+</p>
+
+
+<p class="subhr">
+  <!--close main text container below -->
+  <strong>Build Your Own Fall Starter Retreat</strong>: Start your year off with a fall youth retreat that includes group building by using Mt. Cross' <a href="/ChallengeCourse.html">Challenge Course</a> facilitators with your <a href="/rentals/rentals_tips.html">own retreat</a>.</p>
+{% endblock %}
+
+
+{% block SidebarTitle %}Other Resources{%endblock%}
+{% block SidebarText %}
+
+  <p><a href="/program/retreats/adults_women.html">Fall Women's Retreat</a></p>
+  <p><a href="/program/retreats/adults_men.html">Spring Men's Retreat</a></p>
+  <p><a href="/rentals/rentals_tips.html">Build Your Own<br>
+    "Get-away"</a></p>
+  <p><a href="/ChallengeCourse.html">Challenge Course</a></p>
+	
+    <br>
+{%endblock%}

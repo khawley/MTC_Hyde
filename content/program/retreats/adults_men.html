@@ -8,15 +8,8 @@ name: Fall Men's Retreat
 
 {% block MainText %}
 
-<h1>Fall  Men's Retreat</h1>
-<table width="497" border="0">
-  <tr>
-    <td width="314"><p><strong><em>The weekend of October 25th-27th, 2013<br>
-    </em></strong><em>Saturday Only October 26th 9:30am-6pm</em></p></td>
-    <td width="173" valign="top">
-    
-   <h2 align="center" style="color:blue"><strong>Registration OPEN below! </strong></h2><br></td></tr>
-</table>
+{{ macros.render_prog_info() }}
+
 <p>A retreat for men who may wonder how to engage the stirrings and wonderings of being a person made in God&apos;s image and how that awareness affects the way they live out life in family, work and faith commitments.  Together we will remember stories, ask questions, listen deeply and engage in different practices that will assist us on the journey.  The hope is that at this retreat you may discover some new ways to live each moment fully alive.  You may be surprised that you already engage in spiritual practices.<br></p>
 
 <hr style="width:50	%; margin-top:0px; margin-bottom:0px;" />
@@ -81,9 +74,7 @@ name: Fall Men's Retreat
         
         <br>
         <h3 align="center">ONLINE REGISTRATION</h3>
-   <p align="center"> <button onClick=
-    "window.open('https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883')">
-    Register Online Now</button></p>
+   <p align="center">{{register_button}}</p>
  <ul class="formatted">
    <li>Regular Registration (Postmarked AFTER July 15, 2013)  $135     </li>
    <li>Saturday Only w/o dinner $80</li>
