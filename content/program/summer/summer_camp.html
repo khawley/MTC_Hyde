@@ -20,84 +20,28 @@ description: Overview of the different summer camps available to all ages offere
       {{register_button}}</p>
    </td>
 </tr></table>
-</div>
-</div>
 
-<div class="floatLeftSummerHome">
-<div class="leftInteriorSummerHome">
-   <p><a href="http://www.lomnetwork.org/resources/curriculumregularprices.html">
-   <img  src="{{summer.info.graphic.url}}" alt="{{summer.info.theme}}" border="{{summer.info.graphic.border}}" style="text-align:center; vertical-align:middle; margin-left:10%" {% if summer.info.graphic.width and summer.info.graphic.height %} width="{{summer.info.graphic.width}}" height="{{summer.info.graphic.height}}"{% endif %} ></a></p>
-   <p>Camps include activities such as swimming, hiking, campfire cookouts,  Bible encounters and campfire devotions, and the Challenge Course (high ropes and low ropes elements).</p>
-   <p>Cabin groups create their activity schedule from a list of age appropriate activities, participate in all camp activities, spend time at the <a href="/about/tradingpost.html">Trading Post</a> and feast on quality camp food including a main entree', and a salad bar with fresh vegetable and fruit selections.</p>
-   <p>Campers can invite friends, select cabinmates or come alone to meet new friends. Combine several camps with <a href="/program/summer/connections.html">Connections</a> or use <a href="/program/summer/connections.html">Connections</a> for a Saturday or Sunday pick-up.</p><br>
-   <div align="center">
-      <object id="vp1G4v0w" width="299" height="219" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000">
-         <param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387430&f=G4v0wZxKnMW9RkIHGEWddg&d=106&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options=">
-         <param name="allowFullScreen" value="true">
-         <param name="allowscriptaccess" value="always">
-         <embed id="vp1G4v0w" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387430&f=G4v0wZxKnMW9RkIHGEWddg&d=106&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="400" height="293"></embed>
-      </object>
-   </div>
+<!-- summer theme and links -->
 
-</div> <!-- closes leftinterior -->
-</div> <!-- closes floatleft -->
+{{macros.create_summer_grid()}}
 
-<div class="floatRightSummerHome">
-<div class="rightInteriorSummerHome">
+<ul id="summer_grid">
+{% for a in summer.ages %}
+   {%for c in summer.camp_names %}
+      {% if c.info.grade.g == a.grades.g %}
 
-<table width="100%" height="947" border="0" cellpadding="3px" cellspacing="1px" class="grey_table">
-   <tr><td class="category"><b>Residential Camps</b></td></tr>
-   <tr><td><p align="left"><a href="/program/summer/familycamp.html">Family Camp</a></p></td></tr>
-  <tr><td><p><strong>Confirmation Camp</strong><br>
-		<a href="/program/summer/shalom.html">SHALOM</a></p></td></tr>
-  <tr><td><p><strong>3rd Graders</strong><br>
-        <a href="/program/summer/explorers.html">Explorers</a>
-       <ul class="formatted3"><li> <a href="/program/summer/connections.html">Connections</a> Weekend Option</li></ul></p></td>
-    </tr>
-  <tr>
-  	<td><p><strong>4th-6th Graders</strong><br>
-        <a href="/program/summer/pathfinders.html">Pathfinders</a><br>
-        <a href="/program/summer/treetoppers.html">Tree Toppers</a><br>
-        <ul class="formatted3">
-          <li> <a href="/program/summer/connections.html">Connections</a> Weekend Option</li></ul></td></tr>
-  <tr><td><p><strong>7th-9th Graders</strong><br>
-        <a href="/program/summer/trailblazers.html">Trailblazers</a><br>
-        <a href="/program/summer/beach.html">Beach Camp</a><br>
-        <a href="/program/summer/treetoppers.html">Tree Toppers with High Ropes</a></p>
-        <ul class="formatted3">
-          <li> <a href="/program/summer/connections.html">Connections</a> Weekend Option</li></ul></td></tr>
-  <tr><td><p><strong>9th-12th Graders</strong><br>
-        <a href="/program/summer/CIT_Program.html">CIT (1st year)<br>
-        aCIT (2nd year)<br>
-        Junior Counselor (3rd year)</a></p></td></tr>
-  <tr><td><p><strong>Adults with Special Needs</strong><br>
-      <a href="/program/summer/specialfriends.html">Special Friends</a> Week</p></td></tr>
-  <tr><td><p><strong>Servant Opportunities</strong><br>
-      <a href="/program/summer/adventures.html">Adventures on the Coast</a><br>
-      Special Friends Servants</p></td></tr>
-      
-  <tr><td class="category"><b>Adult Staff Positions</b></td></tr>
-  <tr><td><p><a href="/about/employment_summer.html">Summer Staff & Counselors</a><br>
-    <a href="/program/summer/pastor_in_residence.html">Pastor in Residence</a> for the week<br>
-    <a href="/program/summer/nurse.html">Certified Nurse</a> for a week of camp</p></td></tr>
-    
-  <tr><td class="category"><b>Offsite Camps</b></td></tr>
-  <tr>
-    <td><p style="text-align:center"><b><a href="/program/summer/day_camp.html">Day Camps</a></b></p>
-    <p>Experience a taste of Mt. Cross at a location in Northern California.</p>
-    <p>To find a day camp in your area, please click <a href="/program/summer/day_camp_schedule.html">here</a> to see the churches already signed up for Day Camp.</p></td></tr>
-</table>
+         <li><p><img width="100px" height="100px"><br> {{c.info.name}} <br> entering {{c.info.grade.text}} grades</p></li>
 
-</div> <!-- closes rightinterior -->
-</div> <!-- closes floatright -->
+      {%endif%}
+   {% endfor %}
+{% endfor %}
 
+</ul>
 
-
-<div class="specfloat">
-<div class="specfloatinterior">
+<br>
 <hr style="width:100%; margin-top:0px; margin-bottom:0px;" />
 
-<h2 align="center"><a name="SummerSchedule"></a>{{current_year}} Summer Schedule<br></h2>
+<h2 align="center"><a name="SummerSchedule">{{current_year}} Summer Schedule</a><br></h2>
 <p align="center"><strong>Youth are categorized by the grade they will enter Fall {{current_year}}.</strong></p>
 
 {{macros.create_summer_calendar()}}

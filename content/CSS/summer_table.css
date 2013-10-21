@@ -108,3 +108,27 @@
 	margin-bottom:0px;
 	height: inherit;
 }
+
+
+#summer_grid li {
+   vertical-align: baseline;
+   margin: 10px;
+   padding: 5px;
+   border: 1px solid gray;
+   width: 200px;
+   list-style-type: none;
+   float: left;
+}
+#summer_grid li p {
+   text-align: center
+}
+
+/*
+#summer_grid td{
+   border: 1px solid rgba(0,0,0,0.58);
+   margin: 5px;
+}
+#summer_grid {
+   border-spacing: 10px;
+}
+*/
