@@ -7,35 +7,16 @@ name: Beach Camp
 ---
 
 {% block MainText %}
-<table width="487" border="0">
-  <tr>
-    <td width="393"><h1><em><strong><h1><strong>Beach Camps</strong></h1></td>
-    <td width="134" align="right">
-    
-       <button onClick=
-    "window.open('https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883')">
-    Register Online Now</button> 
-    
-    </td>
-  </tr>
-</table>
-<p><b><i>Middle School and High School: Grades 7th-9th</i></b></p>
-<ul class="formatted">
-<li><em><strong>Beach Camp 4: July 7-12, 2013</strong></em></li>
-<li><strong><em>Beach Camp 5: July 14-19, 2013 <span class="red">**PLEASE CALL FOR THIS WEEK!</span></em></strong> </li>
-<li><strong><em>Beach Camp 6: Jul 28-August 2, 2013</em></strong></ul><br>
 
-<p><strong>Registration Fee: $465</strong>*<a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Beach','','/images/Photos/Beach/kidsinthesand.JPG',1)"><img src="/images/Photos/Beach/trips_clip_image002_0000.jpg" name="Beach" width="214" height="154" hspace="10" vspace="10" border="0" align="right"></a></p>
-<p>Mt. Cross is taking camp to the beach! Each day our beach
-campers will travel with their cabin groups to one of the sunny beaches of Santa Cruz. Highlights of this camp will include boogie boarding, professional surfing lessons, delicious picnic lunches, a special campfire worship on the beach, high ropes and other special activities. This program is perfect for campers who are looking for a new and exciting camp experience. Limit 24 campers per session.</p>
-<p>*Fee includes all meals, housing, professionally led surf lessons, trained adventure staff, camp photo and more.</p>
+{{ macros.render_camp_info() }}
+
+<p>Mt. Cross is taking camp to the beach! Each day our beach campers will travel with their cabin groups to one of the sunny beaches of Santa Cruz. Highlights of this camp will include boogie boarding, professional surfing lessons, delicious picnic lunches, a special campfire worship on the beach, high ropes and other special activities. This program is perfect for campers who are looking for a new and exciting camp experience.</p>
+<p><strong>Limit 24 campers per session.</strong></p>
+<p>*Fees include professional surfing instruction and equipment package. </p>
 <br>
-<p><strong><a href="/Documents/Summer Registration/Surf-Kayak Waivers/2013 Surf Liability Wavier.pdf">Click here</a> to download the Surfing Waiver - Mandatory!</strong></p>
-<table><tr>
-	<td><object id="vp1dGT1K" width="375" height="208" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330385940&f=dGT1KapYErTEA4N5URum2w&d=235&m=p&r=360p+720p&volume=100&start_res=360p&i=m&ct=&cu=&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1dGT1K" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330385940&f=dGT1KapYErTEA4N5URum2w&d=235&m=p&r=360p+720p&volume=100&start_res=360p&i=m&ct=&cu=&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="375" height="208"></embed></object></td>
-	<br><td><object id="vp1GfHMs" width="375" height="208" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330386135&f=GfHMsUXHX3BEAZPV7rxVjQ&d=244&m=p&r=208p+480p&volume=100&start_res=480p&i=m&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1GfHMs" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330386135&f=GfHMsUXHX3BEAZPV7rxVjQ&d=244&m=p&r=240p+480p&volume=100&start_res=480p&i=m&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="375" height="208"></embed></object></td>
-</tr></table>
-<br>
+<!--<p><strong><a href="/Documents/Summer Registration/Surf-Kayak Waivers/2013 Surf Liability Wavier.pdf">Click here</a> to download the Surfing Waiver - Mandatory!</strong></p>-->
+
+
 {% include "socialShare.j2" %}
 
 <h4 align="center"><a href="/program/summer/summer_camp.html#SummerSchedule">Return to Summer Schedule</a></h4>

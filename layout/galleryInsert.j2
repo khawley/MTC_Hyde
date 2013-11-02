@@ -8,14 +8,13 @@
 {%endblock%}
 
 {% for page in gallery.page %}
-
 {% if (page.url == resource.relative_path) %}
 <script type="text/javascript">
 	function startGallery() {
 		var myGallery = new gallery($('myGallery'), {
 			timed: true,
 			showCarousel: false,
-			showInfopane: false
+			showInfopane: false,
 		});
 	}
 	window.addEvent('domready', startGallery);

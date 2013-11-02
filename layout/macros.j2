@@ -107,12 +107,16 @@ Youth Grades {{camp.info.grade.g}}_**
 {%endif%}
 {%endfilter%}
 
-{%if camp.info.img %}
-<img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
-{%endif%}
 
-<p>
+{% include "galleryInsert.j2" %}
+
+{#{%if camp.info.img %}
+<img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
+{%endif%}#}
+
+<p>{% for d_week in summer.dates %}
 {%for no, week in camp.info.weeks %}
+{% if d_week.week.index == week.index%}
 {% if camp.info.price %}
 <b><em>{{camp.info.name}}  {{no}}: {{week.date}} - {{camp.info.price}}</em></b><br>
 {% elif camp.info.prices %}
@@ -123,6 +127,8 @@ Youth Grades {{camp.info.grade.g}}_**
 {%endfor%}
 {%endif%}
 
+{%endif%}
+{%endfor%}
 {%endfor%}
 </p>
 
@@ -225,4 +231,14 @@ Youth Grades {{camp.info.grade.g}}_**
 </script>
 {% endmacro %}
 
+{% macro prep_contact_info(position) %}
+   {{ position }}
+   {{ staff.position }}
 
+   <i><a href"mailto:{{staff.position.email}}">
+   {% if staff.position.name %}
+   {{ staff.position.name}},
+   {% endif %}
+   {{ staff.position.title}}
+   </a></i>
+{% endmacro %}
