@@ -99,11 +99,11 @@ Once our Lodges are full, we will start housing in our dorm style cabins. You wi
 {% filter markdown %}
 {% if camp.info.grade and camp.subheader%}
 **_ {{camp.info.subheader}}    
-Youth Grades {{camp.info.grade}}_**
+Youth Grades {{camp.info.grade.g}}_**
 {% elif camp.info.subheader %}
 **_{{camp.info.subheader}}_**
 {% elif camp.info.grade %}
-**_Youth Grades {{camp.info.grade}}_**
+**_Youth Grades {{camp.info.grade.g}}_**
 {%endif%}
 {%endfilter%}
 
@@ -111,22 +111,20 @@ Youth Grades {{camp.info.grade}}_**
 <img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
 {%endif%}
 
-
-{% filter markdown %}
+<p>
 {%for no, week in camp.info.weeks %}
-**_{{camp.info.name}}  {{no}}: {{week.date}}_**  
-{%endfor%}
-
 {% if camp.info.price %}
-####Price: **_{{camp.info.price}}_**
+<b><em>{{camp.info.name}}  {{no}}: {{week.date}} - {{camp.info.price}}</em></b><br>
 {% elif camp.info.prices %}
-####Prices:  
-{% for no, price in camp.info.prices %}
- **_{{camp.info.name}} {{no}}:_**  {{price}}  
+{% for p_no, price in camp.info.prices %}
+{% if no == p_no %}
+<b><em>{{camp.info.name}}  {{no}}: {{week.date}} - {{price}}</em></b><br>
+{%endif%}
 {%endfor%}
 {%endif%}
-{%endfilter%}
-<br>
+
+{%endfor%}
+</p>
 
 {%endif%}
 {%endfor%} {# ends for camp in summer.camp_names #}
