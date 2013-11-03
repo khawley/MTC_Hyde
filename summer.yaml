@@ -165,7 +165,11 @@ camp_names:
    - info: &treetoppers
       name: Tree Toppers
       url: /program/summer/treetoppers.html
-      grade: *g46
+      grades: 
+         1: *g46
+         4: *g79
+         6: *g46
+         7: *g46
       weeks:
          1: *week1
          "4": *week4

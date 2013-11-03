@@ -24,36 +24,23 @@ description: Camp for ages 8-13 with many opportunities to swim, hike, learn arc
 </table>
 
 {% filter markdown %}
-
-{% if camp.info.grade and camp.subheader%}
-**_ {{camp.info.subheader}}  
-Youth Grades {{camp.info.grade}}_**
-{% elif camp.info.subheader %}
-**_{{camp.info.subheader}}_**
-{% elif camp.info.grade %}
-**_Youth Grades {{camp.info.grade}}_**
-{%endif%}
-
+**_Youth Grades 4th-6th and one 7th-9th week_**
 {%endfilter%}
 
+{% include "galleryInsert.j2" %}
 
 {% filter markdown %}
+{%for d_w in summer.dates %}
 {%for no, week in camp.info.weeks %}
-**_{{camp.info.name}}  {{no}} {%if no == "4" %}*(grades 7-9){%else%}(grades 4-6){%endif%}: {{week.date}}_**  
-{%endfor%}
-
-{%if camp.info.img %}
-<img src="{{camp.info.img.url}}" name="{{camp.info.name}}" width="{{camp.info.img.width}}" height="{{camp.info.img.height}}" hspace="{{camp.info.img.hspace}}" vspace="{{camp.info.img.vspace}}" border="{{camp.info.img.border}}" align="{{camp.info.img.align}}">
+{% if d_w.week.index == week.index %}
+{% for p_no, price in camp.info.prices %}
+{% if no == p_no %}
+**_{{camp.info.name}}  {{no}} {%if no == "4" %}*(grades 7-9){%else%}(grades 4-6){%endif%}: {{week.date}} - {{price}}_**  
 {%endif%}
-
-{% if camp.info.price %}
-####Price: **_{{camp.info.price}}_**
-{% elif camp.info.prices %}
-####Prices:  
-{% for no, price in camp.info.prices %}
- **_{{camp.info.name}} {{no}}:_**  {{price}}  
 {%endfor%}
 {%endif%}
+{%endfor%}
+{%endfor%}
 {%endfilter%}
 
 
@@ -64,20 +51,16 @@ Youth Grades {{camp.info.grade}}_**
 
 
 {% filter markdown %}
-Imagine looking up at stars as you sleep under towering   Redwood trees in the Mt. Cross Treehouse. Tree Topper campers plan daily schedule that might include:   trekking down the creek, working together as a team on the challenge course, building a fort, swimming, crafts, archery or other new ideas your group comes up with. 
+Sleep under the stars in our tree houses, learn how to cook your meals over a campfire and enjoy a unique camp experience. Our older Tree Toppers will enjoy adding high ropes to their experience.
 
-Each day experience digging into God's Story through Bible Encounter and devotion times. PLUS have the opportunity to cook out   several meals. Limited to 24 campers each session. 
-
-Fee includes lodging, meals, staff, summer programs, 5x7 camp photo and more.
+**Limit 20 campers per session.**
 
 Stay two weeks using [Connections][connectionsLink] options (or use Connections for a Saturday or Sunday pickup time.)
 
 
 [connectionsLink]: /program/summer/connections.html
 {%endfilter%}
-
-<object id="vp1gsGc0" width="432" height="240" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000"><param name="movie" value="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options="></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed id="vp1gsGc0" src="http://static.animoto.com/swf/w.swf?w=swf/vp1&e=1330387017&f=gsGc0pTwYwpYugvqT9Yqug&d=249&m=p&r=240p+480p&volume=100&start_res=480p&i=m&ct=&cu=&options=" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="432" height="240"></embed></object>
-<br>
+<p>**No additional discounts apply to week 1.</p>
 
 {% include "socialShare.j2" %}
 
