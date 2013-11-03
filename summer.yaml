@@ -161,7 +161,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
-      grid_img_url:
+      grid_img_url: /images/Photos/Summer/Pathfinders/IMG_6124.JPG
    - info: &treetoppers
       name: Tree Toppers
       url: /program/summer/treetoppers.html
@@ -205,7 +205,7 @@ camp_names:
          vspace: 5
          align: left
          border: 2
-      grid_img_url:
+      grid_img_url: /images/Photos/Summer/Trailblazers/IMG_2264.JPG
    - info: &connections
       name: Connections
       url: /program/summer/connections.html
