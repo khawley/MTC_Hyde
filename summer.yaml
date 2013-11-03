@@ -124,7 +124,11 @@ camp_names:
          4: *week4
          6: *week6
          7: *week7
-      price: $340
+      prices:
+         1: $340
+         4: $390
+         6: $390
+         7: $390
       img:
          url: /images/Photos/Pool/Danielpoolboys.jpg
          width: 214
@@ -133,6 +137,11 @@ camp_names:
          vspace: 10
          align: left
          border: 2
+      grid_img:
+         url:
+         height:
+         width:
+         
    - info: &pathfinders
       name: Pathfinders
       url: /program/summer/pathfinders.html
@@ -143,9 +152,10 @@ camp_names:
          6: *week6
          7: *week7
       prices:
-         "1": $340
-         "4": $390
-         "6 & 7": $340
+         1: $340
+         4: $390
+         6: $390
+         7: $390
       img:
          url: /images/Photos/2009 Archery.JPG
          width: 154
@@ -164,9 +174,10 @@ camp_names:
          6: *week6
          7: *week7
       prices:
-         "1": $340
-         "4": $390
-         "6 & 7": $340
+         1: $340
+         4: $390
+         6: $390
+         7: $390
       img:
          url: /images/Photos/Facilities/2009 Tree Houses.JPG
          width: 215
@@ -183,7 +194,10 @@ camp_names:
          1: *week1
          6: *week6
          7: *week7
-      price: $340
+      prices:
+         1: $340
+         6: $390
+         7: $390
       img:
          url: /images/Photos/Summer_General/2012trustfalls.JPG
          width: 154
@@ -215,7 +229,7 @@ camp_names:
       name: "CIT"
       name_2: "aCIT"
       name_3: "JC"
-      url:
+      url: /program/summer/CIT_Program.html
       grade: *g1012
       weeks:
         "1": *week45
@@ -247,7 +261,7 @@ camp_names:
          border: 2
    - info: &familycamp
       name: Family Camp
-      url:
+      url: /program/summer/familycamp.html
       grade: *gall
       weeks:
          "": *week3
@@ -259,14 +273,14 @@ camp_names:
          url:
    - info: &shalom
       name: Shalom
-      url:
+      url: /program/summer/shalom.html
       grade: *g79
       weeks:
          "": *week5
       prices:
    - info: &beach
       name: Beach Camp
-      url:
+      url: /program/summer/beach.html
       grade: *g79
       weeks:
          4: *week4
@@ -275,6 +289,14 @@ camp_names:
          7: *week7
       price: $525
       
+   - info: &nightowl
+      name: Night Owl
+      url: /program/summer/nightowl.html
+      grade: *g79
+      weeks:
+         4: *week4
+         6: *week6
+      price: $390
 
 camp_weeks:
    - order: 1

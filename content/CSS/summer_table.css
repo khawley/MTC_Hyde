@@ -132,3 +132,7 @@
    border-spacing: 10px;
 }
 */
+#summer_grid img{
+   width:100%;
+   max-width:200px;
+}
