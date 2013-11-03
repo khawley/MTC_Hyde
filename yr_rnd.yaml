@@ -1,5 +1,5 @@
 jrhigh_winter: &jrhigh_winter
-   program: "Jr. High Winter Retreat"
+   program: "Jr. High Winter Confirmation Weekend"
    url: 
    grades: "5-9"
    dates:
@@ -24,7 +24,7 @@ jrhigh_winter: &jrhigh_winter
       border: 2
 
 jrhigh_spring: &jrhigh_spring
-   program: "Jr. High Spring Retreat"
+   program: "Jr. High Spring Confirmation Weekend"
    type: youth
    grades: "5-9"
    dates:

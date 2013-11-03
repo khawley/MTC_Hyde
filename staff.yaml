@@ -1,0 +1,21 @@
+registrar:
+   title: Registrar
+   name: ""
+   email: registrar@mtcross.org
+
+program:
+   title: Director of Programs
+   name: Katie Clark
+   email: katie@mtcross.org
+
+director:
+   title: Executive Director
+   name: Jerry Olstad
+   email: jerry@mtcross.org
+
+cook:
+   title: 
+   name: Suzanne Wilson
+   email: suzanne@mtcross.org
+
+

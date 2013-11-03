@@ -1,14 +1,103 @@
 page:
    - url: "index.html"
      imgs:
-        - link: /program/retreats/adults.html
-          src: /images/Banners/men-womenBANNER.jpg
         - link: /rentals/retreats.html
           src: /images/Banners/PLan your own retreat.jpg
         - link: /about/alumni/alumni_update.html
           src: /images/Banners/alumni banner 2.jpg
-          
+   
+   # summer pages
+   - url: "program/summer/beach.html"
+     imgs:
+        - link: ""
+          src: /images/Photos/Summer/Beach Camp/Img001.jpg
+        - link: ""
+          src: /images/Photos/Summer/Beach Camp/Img002.jpg
+        - link: ""
+          src: /images/Photos/Summer/Beach Camp/Img003.jpg
+        - link: ""
+          src: /images/Photos/Summer/Beach Camp/Img004.jpg
+        - link: ""
+          src: /images/Photos/Summer/Beach Camp/Img005.jpg
+
+   - url: "program/summer/explorers.html"
+     imgs:
+        - link: ""
+          src: /images/Photos/Summer/Explorers/DSC_0006.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/DSC_0135.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_0651.jpg
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_1834.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_2007.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_2211.jpg
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_2409.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_3248.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_3320.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_3329.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_9637.JPG
+        - link: ""
+          src: /images/Photos/Summer/Explorers/IMG_9646.JPG
+   - url: "program/summer/pathfinders.html"
+     imgs:
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_0748.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_2099.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_2123.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_2407.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_4524.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_4527.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_4538.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_4863.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_4937.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_5637.JPG
+        - link: ""
+          src: /images/Photos/Summer/Pathfinders/IMG_6124.JPG
+   - url: "program/summer/treetoppers.html"
+     imgs:
+        - link: ""
+          src: ""#/images/Photos/Summer/
+   - url: "program/summer/trailblazers.html"
+     imgs:
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_0287.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_0362.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_1542.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_2061.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_2264.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_2336.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_5657.JPG
+        - link: ""
+          src: /images/Photos/Summer/Trailblazers/IMG_9691.JPG
+
+   # year round pages
+   
+   
    - url: "example"
      imgs:
         - link: something
           src: yup
+   

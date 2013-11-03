@@ -1,0 +1,69 @@
+---
+title: Jr. High Spring Retreat
+keywords: jr high, middle school
+description: 
+
+name: Jr. High Spring Retreat
+---
+
+{% block MainText %}
+
+<h1>{{yr_rnd.jrhigh_spring.program}}</h1>
+<table width="497" border="0">
+  <tr>
+    <td width="314" height="60">
+    <h3>
+    {% for text, date in yr_rnd.jrhigh_spring.dates %}
+       {%if text == "weekend" %}
+       The weekend of {{date}}<br>
+       {%endif%}
+    {%endfor%}
+   </h3></td>
+    <td width="173" align="center">
+       <strong><em class="red">Registration will open soon!</em></strong> </td>
+  </tr>
+</table>
+
+{% include "galleryInsert.j2" %}
+
+<h4>Speaker: TBA</h4>
+
+<h4>Musician: TBA</h4>
+
+<br>
+<hr style="width:50	%; margin-top:10px; margin-bottom:10px;"/>
+ 
+<!-- <h2>NEW REGISTRATION! Individual parents register their camper online, NOT the Church Leader!! For more information about our new system <a href="/Documents/Retreats/2013 JAM NEWRegFlyer.pdf">read this letter from our registrar.</a></h2><h4 align="center"><a href="/program/retreats/jrhigh_JAMReg.html">Click here for Registration</a></h4> 
+ -->
+<p><strong>Registration Dates &amp; Fees:</strong>
+<ul class="formatted2">
+   <li>Regular Registration
+      <ul>
+         <li>Youth: {{ yr_rnd.jrhigh_spring.prices.general.youth }}</li>
+         <li>Adult Leader: {{ yr_rnd.jrhigh_spring.prices.general.adult }}</li>
+      </ul>
+   </li>
+   <li> LATE Registration (Postmarked ON or AFTER {{ yr_rnd.jrhigh_spring.reg_dates.late }})
+      <ul>
+         <li>Youth: {{ yr_rnd.jrhigh_spring.prices.late.youth }}</li>
+         <li>Adult Leader: {{ yr_rnd.jrhigh_spring.prices.late.adult }}</li>
+      </ul>
+   </li>
+</ul>
+</p>
+
+<p>Registration questions? Contact: <i><a href="mailto:{{staff.registrar.email}}">{%if staff.registrar.name%}{{staff.registrar.name}}, {%endif%}{{staff.registrar.title}}</a></i><br>
+	Program questions? Contact: <i><a href="mailto:{{staff.program.email}}">{%if staff.program.name %}{{staff.program.name}}, {%endif%}{{staff.program.title}}</a></i><br>
+	 Phone: 831-336-5179</p>
+
+{% endblock %}
+
+{% block SidebarTitle %}Retreat Info{% endblock %}
+{% block SidebarText %}
+<p style="text-align:left"><strong>Who:</strong> Confirmation Classes and Junior High Youth Groups</p>
+<hr style="width:50	%; margin-top:0px; margin-bottom:0px;"/><br>
+<p style="text-align:left"><strong>What:</strong> The Junior High Confirmation Weekend is a weekend program for Jr. Hight youth groups and confirmation classes that is designed to let them explore their faith.  Facilitated by our dynamic speakers, special music, and thought provoking breakout sessions.</p>
+<hr style="width:50	%; margin-top:0px; margin-bottom:0px;"/><br>
+<p style="text-align:left"><strong>Housing and Adult Leaders:</strong> All participants will be housed in our Evergreen and Redwood Dorms or the Madrone Cabins.  These buildings have electricity, heating, bunk beds and shared bathroom facilities.  Adult leaders will stay with youth from their church and, in some cases, multiple churches may be in the same dorm or cabin.  <br><br>Each church group must register 1 adult leader for every 7 youth participant; a male and female leader is required of groups bringing youth of both sexes.</p>
+
+{% endblock %}

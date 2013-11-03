@@ -15,11 +15,12 @@ plugins:
     - hyde.ext.plugins.meta.SorterPlugin
     - hyde.ext.plugins.meta.GrouperPlugin
     - hyde.ext.plugins.meta.TaggerPlugin
-context:
+context: 
     providers:
         gallery: gallery.yaml
         summer: summer.yaml
         yr_rnd: yr_rnd.yaml
+        staff: staff.yaml
     data:
         online_reg: "https://registration.campbrain.com/Portal/Login.aspx?H=MtCrossMinistries&G=883"
         current_year: 2014
