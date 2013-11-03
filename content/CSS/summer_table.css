@@ -136,3 +136,6 @@
    width:100%;
    max-width:200px;
 }
+#summer_grid li a{
+   text-decoration: none
+}

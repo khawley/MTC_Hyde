@@ -30,7 +30,7 @@ description: Overview of the different summer camps available to all ages offere
    {%for c in summer.camp_names %}
       {% if c.info.grade.g == a.grades.g %}
 
-         <li><p><img><br> {{c.info.name}} <br> entering {{c.info.grade.text}} grades</p></li>
+         <li><a href="{{c.info.url}}"><p><img src="{{c.info.grid_img_url}}"><br> {{c.info.name}} <br> entering {{c.info.grade.text}} grades</p></a></li>
 
       {%endif%}
    {% endfor %}

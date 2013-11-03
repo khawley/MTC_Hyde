@@ -137,10 +137,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
-      grid_img:
-         url:
-         height:
-         width:
+      grid_img_url: /images/Photos/Summer/Explorers/IMG_3320.JPG
          
    - info: &pathfinders
       name: Pathfinders
@@ -164,6 +161,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
+      grid_img_url:
    - info: &treetoppers
       name: Tree Toppers
       url: /program/summer/treetoppers.html
@@ -186,6 +184,7 @@ camp_names:
          vspace: 25
          align: right
          border: 2
+      grid_img_url:
    - info: &trailblazers
       name: Trailblazers
       url: /program/summer/trailblazers.html
@@ -206,6 +205,7 @@ camp_names:
          vspace: 5
          align: left
          border: 2
+      grid_img_url:
    - info: &connections
       name: Connections
       url: /program/summer/connections.html
@@ -224,6 +224,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
+      grid_img_url:
 # 'CIT' is currently referenced directly in macros.j2 for comparison
    - info: &CIT
       name: "CIT"
@@ -244,6 +245,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
+      grid_img_url:
    - info: &specialfriends
       name: Special Friends
       url: /program/summer/specialfriends.html
@@ -259,6 +261,7 @@ camp_names:
          vspace: 10
          align: left
          border: 2
+      grid_img_url:
    - info: &familycamp
       name: Family Camp
       url: /program/summer/familycamp.html
@@ -271,6 +274,7 @@ camp_names:
          "ages 0-4": $0
       img:
          url:
+      grid_img_url:
    - info: &shalom
       name: Shalom
       url: /program/summer/shalom.html
@@ -278,6 +282,7 @@ camp_names:
       weeks:
          "": *week5
       prices:
+      grid_img_url:
    - info: &beach
       name: Beach Camp
       url: /program/summer/beach.html
@@ -288,7 +293,7 @@ camp_names:
          6: *week6
          7: *week7
       price: $525
-      
+      grid_img_url:
    - info: &nightowl
       name: Night Owl
       url: /program/summer/nightowl.html
@@ -297,7 +302,7 @@ camp_names:
          4: *week4
          6: *week6
       price: $390
-
+      grid_img_url:
 camp_weeks:
    - order: 1
      week: *week1
